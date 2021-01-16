@@ -1,0 +1,30 @@
+<!--pages/chengyu/chengyu.wxml-->
+<view>
+  <view class="pages-box">
+    <!--  提示文字  -->
+    <view class="fs32 fc99">
+      请输入
+    </view>
+    <!--  搜索框  -->
+    <view class="inp-box">
+      <input class="inp" bindinput="word" placeholder="请输入" placeholder-style="font-size:30rpx"/>
+      <view class="inpimg">
+        <image src="../../images/search.png" class="pagesimg" />
+      </view>
+    </view>
+    <!--  提交按钮  -->
+    <view class="btn-box">
+      <button class="btn fs32" bindtap="getdata">
+        查 询
+      </button>
+    </view>
+
+  </view>
+  <!--  详细信息  -->
+  <view class="det-box {{show?'':'dp-n'}}">
+    <view class="pglist fc99">
+      <view class="pg-t fs32">查询结果：</view>
+      <text selectable='true' class="pg-t fs32" >{{getdata}}</text>
+    </view>
+  </view>
+</view>

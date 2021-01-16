@@ -1,0 +1,12 @@
+/* pages/tyfy/tyfy.wxss */
+page {
+  height: 100%;
+}
+
+.select-wrap {
+  width: 300rpx;
+}
+
+.selected {
+  margin-top: 50%;
+}

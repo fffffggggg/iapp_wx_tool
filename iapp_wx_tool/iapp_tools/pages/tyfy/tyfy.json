@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#009be0",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "同义词反义词",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "select": "/tools/DropDownMenu/DropDownMenu"
+  }
+}

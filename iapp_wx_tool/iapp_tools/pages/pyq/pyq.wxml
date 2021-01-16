@@ -1,0 +1,29 @@
+<!--pages/pyq/pyq.wxml-->
+<view>
+  <view class="pages-box">
+    <!--  提示文字  -->
+    <view class="fs32 fc99">
+      获取朋友圈文案
+    </view>
+    
+    <!--  提交按钮  -->
+    <view class="btn-box">
+      <button class="btn fs32" bindtap="getdata">
+        查 询
+      </button>
+    </view>
+
+  </view>
+  <!--  详细信息  -->
+  <view class="det-box {{show?'':'dp-n'}}">
+    <view class="pg-t fs36 fc99">
+      文案
+    </view>
+    <view class="pglist fc99">
+      <text selectable='true' class="pg-t fs32" >{{getdata}}</text>
+    </view>
+    <button class="btn fs32"  bindtap="copydata">
+       复制
+      </button>
+  </view>
+</view>

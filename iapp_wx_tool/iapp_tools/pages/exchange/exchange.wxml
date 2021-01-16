@@ -1,0 +1,77 @@
+<!--pages/constellation/constellation.wxml-->
+<view>
+  <view class="pages-box">
+    <!--  提示文字  -->
+    <view class="fs20 fc99">
+      此汇率仅供参考，不构成投资建议。投资者据此买卖，风险自担。
+    </view>
+    <!--  搜索框  -->
+    <!--  搜索框  -->
+    <view class="inp-box">
+      <input class="inp" bindinput="money" placeholder="请输入" placeholder-style="font-size:30rpx"/>
+      <view class="inpimg">
+        <image src="../../images/search.png" class="pagesimg" />
+      </view>
+    </view>
+    
+    <view class="inp-box">
+      <view class="select-wrap">
+       <select array='{{arrowSelectArray}}' hintText="持有货币种类" width="130px" bind:clickItem='clickItem' ></select>
+      </view>
+    </view>
+
+    
+    <!--  提交按钮  -->
+    <view class="btn-box">
+      <button class="btn fs32" bindtap="getdata">
+        查 询
+      </button>
+    </view>
+
+  </view>
+  <!--  详细信息  -->
+  <view class="det-box {{show?'':'dp-n'}}">
+  
+    <view class="pglist fc99">
+      <view class="pg-l fs32">人民币：</view>
+      <view class="pg-r fs32">{{getdata.RMB}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">美元：</view>
+      <view class="pg-r fs32">{{getdata.USD}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">欧元：</view>
+      <view class="pg-r fs32">{{getdata.EUR}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">英镑：</view>
+      <view class="pg-r fs32">{{getdata.GBP}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">港币：</view>
+      <view class="pg-r fs32">{{getdata.HKD}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">日元：</view>
+      <view class="pg-r fs32">{{getdata.JPY}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">韩元：</view>
+      <view class="pg-r fs32">{{getdata.KER}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">加拿大元：</view>
+      <view class="pg-r fs32">{{getdata.CAD}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">新西兰元：</view>
+      <view class="pg-r fs32">{{getdata.NZD}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">澳元：</view>
+      <view class="pg-r fs32">{{getdata.AUD}}</view>
+    </view>
+   
+  </view>
+</view>

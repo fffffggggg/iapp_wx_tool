@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#009be0",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "功/热/能换算",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "select": "/tools/DropDownMenu/DropDownMenu"
+  }
+}

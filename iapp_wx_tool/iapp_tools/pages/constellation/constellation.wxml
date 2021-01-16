@@ -1,0 +1,70 @@
+<!--pages/constellation/constellation.wxml-->
+<view>
+  <view class="pages-box">
+    <!--  提示文字  -->
+    <view class="fs32 fc99">
+      星座运势
+    </view>
+    <!--  搜索框  -->
+    <view class="inp-box">
+      <view class="select-wrap">
+       <select array='{{arrowSelectArray}}' hintText="请选择" width="130px" bind:clickItem='clickItem' ></select>
+      </view>
+    </view>
+    
+    <view class="inp-box">
+      <view class="select-wrap">
+      <select array='{{arrowSelectTypeArray}}' hintText="请选择" width="130px" bind:clickItem='clickItemType' ></select>
+      </view>
+    </view>
+    <!--  提交按钮  -->
+    <view class="btn-box">
+      <button class="btn fs32" bindtap="getdata">
+        查 询
+      </button>
+    </view>
+
+  </view>
+  <!--  详细信息  -->
+  <view class="det-box {{show?'':'dp-n'}}">
+    <view class="pg-t fs36 fc99">
+      详细信息
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">综合指数：</view>
+      <view class="pg-r fs32">{{getdata.all}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">幸运色：</view>
+      <view class="pg-r fs32">{{getdata.color}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">健康指数：</view>
+      <view class="pg-r fs32">{{getdata.health}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">爱情指数：</view>
+      <view class="pg-r fs32">{{getdata.love}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">财运指数：</view>
+      <view class="pg-r fs32">{{getdata.money}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">幸运数字：</view>
+      <view class="pg-r fs32">{{getdata.number}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">工作指数：</view>
+      <view class="pg-r fs32">{{getdata.work}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">速配星座：</view>
+      <view class="pg-r fs32">{{getdata.QFriend}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-t fs32">概述：</view>
+      <view class="pg-t fs32">{{getdata.summary}}</view>
+    </view>
+  </view>
+</view>

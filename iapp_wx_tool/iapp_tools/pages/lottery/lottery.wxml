@@ -1,0 +1,48 @@
+<!--pages/constellation/constellation.wxml-->
+<view>
+  <view class="pages-box">
+    <!--  提示文字  -->
+    <view class="fs32 fc99">
+      彩票查询
+    </view>
+    <!--  搜索框  -->
+    <view class="inp-box">
+      <view class="select-wrap">
+       <select array='{{arrowSelectArray}}' hintText="请选择" width="130px" bind:clickItem='clickItem' ></select>
+      </view>
+    </view>
+    <!--  提交按钮  -->
+    <view class="btn-box">
+      <button class="btn fs32" bindtap="getdata">
+        查 询
+      </button>
+    </view>
+
+  </view>
+  <!--  详细信息  -->
+  <view class="det-box {{show?'':'dp-n'}}">
+    <view class="pg-t fs36 fc99">
+      详细信息
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">彩票名称：</view>
+      <view class="pg-r fs32">{{getdata.lottery_name}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">开奖结果：</view>
+      <view class="pg-r fs32">{{getdata.lottery_res}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">开奖期号：</view>
+      <view class="pg-r fs32">{{getdata.lottery_no}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">开奖日期：</view>
+      <view class="pg-r fs32">{{getdata.lottery_date}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">截止日期：</view>
+      <view class="pg-r fs32">{{getdata.lottery_exdate}}</view>
+    </view>
+  </view>
+</view>

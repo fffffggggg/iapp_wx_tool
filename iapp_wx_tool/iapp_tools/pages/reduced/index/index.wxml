@@ -1,0 +1,26 @@
+<!--pages/index/index.wxml-->
+<view class="index-body">
+  
+  
+  <view class="server-box">
+    <!--服务  -->
+    <!-- <view class="">
+      <view class="server-text fs26">服 务</view>
+    </view> -->
+    <!--列表  -->
+    <view class="list-server">
+      <!-- 循环 -->
+      <view class="listbox" wx:for="{{server}}" wx:key="img">
+        <navigator url="{{item.openpath}}" hover-class="none" open-type="navigate">
+          <view>
+            <image src="{{item.img}}" class="listimg" />
+          </view>
+          <view class="fs28">
+            {{item.text}}
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view class="clear"></view>
+  </view>
+</view>

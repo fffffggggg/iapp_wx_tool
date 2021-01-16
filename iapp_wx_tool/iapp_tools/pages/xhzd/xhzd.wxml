@@ -1,0 +1,45 @@
+<!--pages/xhzd/xhzd.wxml-->
+<view>
+  <view class="pages-box">
+    <!--  提示文字  -->
+    <view class="fs32 fc99">
+      请输入汉字
+    </view>
+    <!--  搜索框  -->
+    <view class="inp-box">
+      <input class="inp" bindinput="word" placeholder="请输入" placeholder-style="font-size:30rpx"/>
+      <view class="inpimg">
+        <image src="../../images/search.png" class="pagesimg" />
+      </view>
+    </view>
+    <!--  提交按钮  -->
+    <view class="btn-box">
+      <button class="btn fs32" bindtap="getdata">
+        查 询
+      </button>
+    </view>
+
+  </view>
+  <!--  详细信息  -->
+  <view class="det-box {{show?'':'dp-n'}}">
+    <view class="pg-t fs36 fc99">
+      详细信息
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">拼音：</view>
+      <view class="pg-r fs32">{{getdata.pinyin}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">部首：</view>
+      <view class="pg-r fs32">{{getdata.bushou}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-l fs32">笔画：</view>
+      <view class="pg-r fs32">{{getdata.bihua}}</view>
+    </view>
+    <view class="pglist fc99">
+      <view class="pg-t fs32">解释：</view>
+      <text selectable='true' class="pg-t fs32" >{{getdata.xiangjie}}</text>
+    </view>
+  </view>
+</view>

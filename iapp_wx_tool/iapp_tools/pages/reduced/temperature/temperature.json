@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#009be0",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "温度换算",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "select": "/tools/DropDownMenu/DropDownMenu"
+  }
+}

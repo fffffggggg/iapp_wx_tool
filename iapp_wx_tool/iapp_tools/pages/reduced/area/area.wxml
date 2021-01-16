@@ -1,0 +1,37 @@
+<!--pages/constellation/constellation.wxml-->
+<view>
+  <view class="pages-box">
+    <!--  输入框  -->
+    <view class="inp-box">
+      <input class="inp_l" bindinput="srcInput" placeholder="请输入不大于10位" placeholder-style="font-size:32rpx"/>
+     </view>
+
+    <view class="inp-box">
+      <view class="select-wrap">
+       <select array='{{selectSrc}}' hintText="请选择" width="130px" bind:clickItem='clickItemSrc' ></select>
+      </view>
+    </view>
+    
+    <view class="inp-box">
+      <view class="select-wrap">
+      <select array='{{selectDest}}' hintText="请选择" width="130px" bind:clickItem='clickItemDest' ></select>
+      </view>
+    </view>
+    <!--  提交按钮  -->
+    <view class="btn-box">
+      <button class="btn fs32" bindtap="getdata">
+        计 算
+      </button>
+    </view>
+
+  </view>
+  <!--  详细信息  -->
+  <view class="det-box {{show?'':'dp-n'}}">
+    <view class="pg-t fs36 fc99">
+      结果
+    </view>
+    <view class="pglist fc99">
+      <text selectable='true' class="pg-t fs50" >{{getdata}}</text>
+    </view>
+  </view>
+</view>
